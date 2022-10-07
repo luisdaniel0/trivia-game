@@ -111,7 +111,7 @@ let questions = [
     question: "Ready to Die (1994)",
     img: "img/Ready_To_Die.jpeg",
     a: "2pac",
-    b: "Biggie",
+    b: "The Notorious B.I.G.",
     c: "Big L",
     d: "Mase",
     answer: "B"
@@ -190,7 +190,7 @@ function renderQuestion() {
   test.innerHTML += "<label> <input type='radio' name='choices' value='B'> " + chB + "</label><br>"
   test.innerHTML += "<label> <input type='radio' name='choices' value='C'> " + chC + "</label><br>"
   test.innerHTML += "<label> <input type='radio' name='choices' value='D'> " + chD + "</label><br><br>"
-  test.innerHTML += "<button onclick='checkAnswer()'>Submit Answer</button>";
+  test.innerHTML += "<button class='submit answer button'onclick='checkAnswer()'>Submit Answer</button>";
 
 
 }
