@@ -11,7 +11,7 @@ let questionImg = document.querySelector(".questionImg");
 let questions = [
   {
     question: "Illmatic (1994)",
-    img: "/img/IllmaticNas.jpeg",
+    img: "img/IllmaticNas.jpeg",
     a: "Biggie",
     b: "Jay Z",
     c: "Drake",
@@ -21,7 +21,7 @@ let questions = [
 
   {
     question: "My Beautiful Dark Twisted Fantasy (2010)",
-    img: "/img/MBDTF.jpeg",
+    img: "img/MBDTF.jpeg",
     a: "Drake",
     b: "Frank Ocean",
     c: "Andre 3000",
@@ -31,7 +31,7 @@ let questions = [
 
   {
     question: "Get Rich or Die Tryin (2003)",
-    img: "Get-rich-or-die-tryin.jpeg",
+    img: "img/Get-rich-or-die-tryin.jpeg",
     a: "50 cent",
     b: "Jadakiss",
     c: "DMX",
@@ -41,7 +41,7 @@ let questions = [
 
   {
     question: "Come Home with Me (2002)",
-    img: "come-home-with-me.jpeg",
+    img: "img/come-home-with-me.jpeg",
     a: "Juelz Santana",
     b: "Lil wayne",
     c: "Cam'ron",
@@ -51,6 +51,7 @@ let questions = [
 
   {
     question: "Tha Carter III (2008)",
+    img:"img/Carter3.jpeg",
     a: "50 Cent",
     b: "Eminem",
     c: "Lil Wayne",
@@ -61,6 +62,7 @@ let questions = [
 
   {
     question: "Blond (2016)",
+    img: "img/blond.jpeg",
     a: "The Weeknd",
     b: "Frank Ocean",
     c: "Steve Lacy",
@@ -71,6 +73,7 @@ let questions = [
 
   {
     question: "Trilogy (2012)",
+    img: "img/trilogy.png",
     a: "Frank Ocean",
     b: "Chris Brown",
     c: "The Weeknd",
@@ -81,6 +84,7 @@ let questions = [
 
   {
     question: "17 (2017)",
+    img: "img/17_xxxtentacion.png",
     a: "XXXTENTACION",
     b: "Kendrick lamar",
     c: "J.Cole",
@@ -91,6 +95,7 @@ let questions = [
 
   {
     question: "The Life of Pablo (2016)",
+    img: "img/The_life_of_pablo_alternate.jpeg",
     a: "Kid Cudi",
     b: "Travis Scott",
     c: "Kanye West",
@@ -101,6 +106,7 @@ let questions = [
 
   {
     question: "Ready to Die (1994)",
+    img: "img/Ready_To_Die.jpeg",
     a: "2pac",
     b: "Biggie",
     c: "Big L",
@@ -119,8 +125,9 @@ function get(x) {
 //render questions on page
 function renderQuestion() {
   
-    // document.querySelector('.questionImg').src = "img/IllmaticNas.jpeg"
-  
+//document.querySelector('.questionImg').src = "img/IllmaticNas.jpeg"
+
+
 
 
   test = get("test");
@@ -155,6 +162,8 @@ function renderQuestion() {
   chC = questions[pos].c;
   chD = questions[pos].d;
 
+  questionImg.src = questions[pos].img
+
   //display the question
   test.innerHTML = "<h3>" + question + "</h3";
 
@@ -177,10 +186,15 @@ function checkAnswer() {
       choice = choices[i].value;
     }
   }
+  
+    //questionImg.innerHTML="<img src=" + questions[0].img + ">"
+    
+  
   // checks if answer matches the correct choice
   if (choice == questions[pos].answer) {
     //each time there is a correct answer this value increases
     correct = correct + 10;
+    
   }
 
   
