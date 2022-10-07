@@ -4,6 +4,7 @@
   color:rgb(255, 255, 255);
   font-size:25px;
   
+  
 }
 
 .hidden{
@@ -20,6 +21,7 @@ body{
   align-items: center;
   background:rgb(31, 32, 33);
   font-family: 'Inter', sans-serif;
+  
 
 }
 
@@ -53,6 +55,10 @@ img {
 
 h1{
   font-size: 35;
+}
+
+label{
+  cursor: pointer;
 }
 
 
