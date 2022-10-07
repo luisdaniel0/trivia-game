@@ -1,4 +1,3 @@
-/* grid with question on top and 4 answers, there should be a next/submit button and it should throw your score at the end ) */
 
 let pos = 0;
 let correct = 0;
@@ -11,7 +10,7 @@ let test_ = document.querySelector(".test_");
 let test_stat = document.querySelector(".test_stat");
 let rules = document.querySelector(".rules");
 
-//array of objects containing questions and answers
+
 let questions = [
   {
     question: "Illmatic (1994)",
@@ -130,7 +129,7 @@ function get(x) {
   
 
 
-//render questions on page
+
 function renderQuestion() {
   
   playNowBtn.addEventListener("click", (event) => {
@@ -152,7 +151,7 @@ function renderQuestion() {
   test = get("test");
   if (pos >= questions.length) {
     playNowBtn.classList.add("hidden");
-    // questionImg.innerHTML="<src=" + 
+    
 
     console.log('hello')
     test.innerHTML = "<h2>You got a score of " + correct + "/100 </h2>";
@@ -160,7 +159,7 @@ function renderQuestion() {
     
     get("test_status").innerHTML = "Test completed";
 
-    //resets the variable to allow to restart 
+    
     pos = 0;
     
     
@@ -183,10 +182,8 @@ function renderQuestion() {
 
   questionImg.src = questions[pos].img
 
-  //display the question
   test.innerHTML = "<h3>" + question + "</h3";
 
-  //display the multiple choices
 
   test.innerHTML += "<label> <input type='radio' name='choices' value='A'> " + chA + "</label><br>"
   test.innerHTML += "<label> <input type='radio' name='choices' value='B'> " + chB + "</label><br>"
@@ -205,22 +202,13 @@ function checkAnswer() {
       choice = choices[i].value;
     }
   }
-  
-    //questionImg.innerHTML="<img src=" + questions[0].img + ">"
     
-  
-  // checks if answer matches the correct choice
   if (choice == questions[pos].answer) {
-    //each time there is a correct answer this value increases
     correct = correct + 10;
     
   }
-
-  
-  
-  // changes position of which character user is on
   pos++;
-  // then the renderQuestion function runs again to go to next question
+  
   renderQuestion();
 
   restartBtn.addEventListener("submit", (e) => {
@@ -237,11 +225,3 @@ function checkAnswer() {
 window.addEventListener("load", renderQuestion);
 
 
-
-//button to  checkanswer
-
-
-//refactor with function that checks answer as u go 
-
-
-//make a comparison and add if else to add/subtract as u go 
