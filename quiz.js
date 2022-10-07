@@ -6,6 +6,9 @@ let test, test_status, question, choice, choices, chA, chB, chC, chD;
 let playNowBtn = document.querySelector(".playNow");
 let restartBtn = document.querySelector(".restart");
 let questionImg = document.querySelector(".questionImg");
+let questionContainer = document.querySelector(".questionContainer")
+let test_ = document.querySelector(".test_");
+let test_stat = document.querySelector(".test_stat");
 
 //array of objects containing questions and answers
 let questions = [
@@ -122,11 +125,25 @@ function get(x) {
   return document.getElementById(x);
 }
 
+
+  
+
+
 //render questions on page
 function renderQuestion() {
   
-//document.querySelector('.questionImg').src = "img/IllmaticNas.jpeg"
+  playNowBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+    playNowBtn.classList.add("hide");
+    questionContainer.classList.remove("hide");
+    questionImg.classList.remove("hide");
+    test_.classList.remove("hide");
+    test_stat.classList.remove("hide");
+    restartBtn.classList.remove("hide");
 
+
+  
+})
 
 
 
