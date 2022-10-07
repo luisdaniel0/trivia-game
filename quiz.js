@@ -9,6 +9,7 @@ let questionImg = document.querySelector(".questionImg");
 let questionContainer = document.querySelector(".questionContainer")
 let test_ = document.querySelector(".test_");
 let test_stat = document.querySelector(".test_stat");
+let rules = document.querySelector(".rules");
 
 //array of objects containing questions and answers
 let questions = [
@@ -135,6 +136,7 @@ function renderQuestion() {
   playNowBtn.addEventListener("click", (event) => {
     event.preventDefault();
     playNowBtn.classList.add("hide");
+    rules.classList.add("hide");
     questionContainer.classList.remove("hide");
     questionImg.classList.remove("hide");
     test_.classList.remove("hide");

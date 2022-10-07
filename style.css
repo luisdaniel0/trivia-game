@@ -2,7 +2,7 @@
 * {
   box-sizing: border-box;
   color:rgb(255, 255, 255);
-  font-size:20px;
+  font-size:25px;
   
 }
 
@@ -18,11 +18,14 @@ body{
   width:100vw;
   height:100vh;
   align-items: center;
-  background:rgb(31, 32, 33)
+  background:rgb(31, 32, 33);
+  font-family: 'Inter', sans-serif;
+
 }
 
 img {
   height: 300px;
+  opacity: 0.1;
 }
 
 .hide{
@@ -43,5 +46,14 @@ img {
   border-radius: 8px;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
 }
+
+.playNow{
+  font-size: 50;
+}
+
+h1{
+  font-size: 35;
+}
+
 
 
